@@ -1,7 +1,7 @@
+#include <ctype.h>
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
-#include <ctype.h>
 
 //
 // Read a line of the form "<one letter command> [<optional integer argment>]".
@@ -28,7 +28,7 @@ int getcmd(char *pCmd, int *pArg1, int *pArg2) {
     ac++;
   }
 
-  for ( ; *bp ; bp++) {
+  for (; *bp; bp++) {
     if (!isspace(*bp)) {
       int ic;
       ic = sscanf(bp, "%d %d", &optarg1, &optarg2);
@@ -50,4 +50,3 @@ int getcmd(char *pCmd, int *pArg1, int *pArg2) {
   *pCmd = cmd;
   return ac;
 }
-
