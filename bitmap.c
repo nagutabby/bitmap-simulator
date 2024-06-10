@@ -152,15 +152,16 @@ int main() {
 
   // 正常系テスト
   // bitmap_allocate(2);
-  // bitmap_allocate(10);
   // bitmap_free(0, 1);
+  // bitmap_allocate(10);
+
 
   // 異常系テスト
   // bitmap_allocate(1024);
   // bitmap_free(-1, 1);
 
 #if 1
-	bitmap_interactive();
+  bitmap_interactive();
 #endif
 
   bitmap_dump();
